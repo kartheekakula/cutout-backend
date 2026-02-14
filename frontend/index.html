@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://api.fontshare.com/v2/css?f[]=zodiak@400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+
+  <meta charset="UTF-8" />
+  <title>CUTOUT</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- GRAIN -->
+  <div class="grain-overlay"></div>
+  <div class="pattern-overlay"></div>
+  <div class="optional-pattern"></div>
+
+  <!-- STICKERS -->
+  <img src="assets/auto.png" class="sticker auto" alt="">
+  <img src="assets/laptop.png" class="sticker laptop" alt="">
+  <img src="assets/mouse.png" class="sticker mouse" alt="">
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1 class="logo">CUTOUT</h1>
+
+    <p class="subtitle">
+      remove backgrounds.<br>
+      images + videos.<br>
+      simple ra.
+    </p>
+
+    <div class="cta">
+      <!-- IMPORTANT: no inline onclick -->
+      <button id="uploadBtn">UPLOAD FILE</button>
+      <input type="file" id="fileInput" hidden />
+    </div>
+
+    <p class="micro">
+      black bg for videos • transparent for images • no watermark
+    </p>
+  </section>
+
+  <!-- OPTIONS -->
+  <section class="options">
+    <h2>BACKGROUND OPTIONS</h2>
+    <div class="choices">
+      <div class="choice active">BLACK</div>
+      <div class="choice">WHITE</div>
+      <div class="choice">TRANSPARENT</div>
+    </div>
+  </section>
+
+  <!-- RESULT -->
+  <section class="result">
+    <div class="preview">
+      <p id="previewText">preview will appear here.</p>
+    </div>
+    <button class="download">DOWNLOAD</button>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>
+      made by an indie creator.<br>
+      not a company. not an app. just vibes.
+    </p>
+    <span>© CUTOUT</span>
+  </footer>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>
+

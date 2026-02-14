@@ -1,0 +1,282 @@
+/* =====================
+   RESET
+===================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* =====================
+   BASE
+===================== */
+body {
+  background:
+    radial-gradient(
+      1200px 600px at 10% 10%,
+      rgba(249, 241, 231, 0.06),
+      transparent 40%
+    ),
+    linear-gradient(
+      180deg,
+      #1A0A2E 0%,
+      #12071F 100%
+    );
+  color: #F9F1E7;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+/* =====================
+   GRAIN OVERLAY
+===================== */
+.grain-overlay {
+  position: fixed;
+  inset: 0;
+  background: url("assets/grain.png");
+  opacity: 0.04;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* PATTERN OVERLAY */
+.pattern-overlay {
+  position: fixed;
+  inset: 0;
+
+  background-image:
+    linear-gradient(45deg, rgba(249, 241, 231, 0.12) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(249, 241, 231, 0.12) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(249, 241, 231, 0.12) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(249, 241, 231, 0.12) 75%);
+
+  background-size: 40px 40px;
+  background-position: 0 0, 0 20px, 20px -20px, -20px 0;
+
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* =========================
+   OPTIONAL – EXTRA TEXTURE
+   (safe to remove anytime)
+========================= */
+
+.optional-pattern {
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(
+      rgba(249, 241, 231, 0.04) 1px,
+      transparent 1px
+    );
+  background-size: 18px 18px;
+  opacity: 0.25;
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* =====================
+   STICKERS
+===================== */
+.sticker {
+  position: absolute;
+  width: 120px;
+  opacity: 0.9;
+  filter: contrast(1.2) saturate(1.2);
+  z-index: 10;
+}
+
+.auto {
+  top: 12%;
+  left: -30px;
+  transform: rotate(-12deg);
+}
+
+.laptop {
+  bottom: 14%;
+  right: -40px;
+  transform: rotate(9deg);
+}
+
+.mouse {
+  top: 55%;
+  right: 20%;
+  transform: rotate(-18deg);
+}
+
+/* =====================
+   HERO
+===================== */
+.hero {
+  padding: 80px 60px;
+  max-width: 1100px;
+  position: relative;
+  z-index: 5;
+}
+
+.logo {
+  font-family: "Zodiak", serif;
+  font-weight: 700;
+  font-size: clamp(5rem, 12vw, 9rem);
+  letter-spacing: -4px;
+  line-height: 0.9;
+}
+
+.subtitle {
+  font-size: 26px;
+  margin-top: 24px;
+  line-height: 1.4;
+  color: #F9F1E7;
+  opacity: 0.85;
+}
+
+/* =====================
+   CTA BUTTON
+===================== */
+.cta {
+  margin-top: 42px;
+}
+
+button {
+  background: transparent;
+  border: 2px solid #F9F1E7;
+  color: #F9F1E7;
+  padding: 18px 42px;
+  font-size: 0.95rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+button:hover {
+  background: #F9F1E7;
+  color: #1A0A2E;
+  transform: translateY(-2px) rotate(-0.5deg);
+}
+
+/* =====================
+   MICRO COPY
+===================== */
+.micro {
+  margin-top: 18px;
+  font-size: 0.85rem;
+  color: #F9F1E7;
+  opacity: 0.55;
+}
+
+/* =====================
+   OPTIONS
+===================== */
+.options {
+  padding: 40px 60px;
+}
+
+.options h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.choices {
+  display: flex;
+  gap: 18px;
+}
+
+.choice {
+  padding: 12px 26px;
+  border: 2px solid #F9F1E7;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.15s ease;
+}
+
+.choice:hover {
+  transform: rotate(-1deg);
+}
+
+.choice.active {
+  background: #F9F1E7;
+  color: #1A0A2E;
+}
+
+/* =====================
+   RESULT / PREVIEW
+===================== */
+.result {
+  padding: 60px;
+}
+
+.preview {
+  height: 320px;
+  border: 1.5px dashed #F9F1E7;
+  background: rgba(77, 27, 68, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #F9F1E7;
+  opacity: 0.85;
+}
+
+.preview img {
+  max-width: 100%;
+  max-height: 100%;
+  animation: glitchIn 0.5s ease forwards;
+}
+
+/* =====================
+   FOOTER
+===================== */
+footer {
+  padding: 40px 60px;
+  font-size: 12px;
+  color: #F9F1E7;
+  opacity: 0.5;
+  max-width: 900px;
+}
+
+/* =====================
+   TYPO CLOUD (ZINE VIBE)
+===================== */
+.typo-cloud {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.typo {
+  position: absolute;
+  font-size: clamp(1rem, 3vw, 2.3rem);
+  opacity: 0.06;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transform: rotate(-8deg);
+}
+
+/* positions */
+.typo:nth-child(1) { top: 10%; left: 15%; }
+.typo:nth-child(2) { top: 40%; left: 5%; }
+.typo:nth-child(3) { bottom: 20%; left: 30%; }
+.typo:nth-child(4) { top: 18%; right: 20%; }
+.typo:nth-child(5) { bottom: 12%; right: 8%; }
+.typo:nth-child(6) { top: 65%; right: 35%; }
+
+/* =====================
+   ANIMATIONS
+===================== */
+@keyframes glitchIn {
+  from {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
